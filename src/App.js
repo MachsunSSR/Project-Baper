@@ -41,10 +41,9 @@ function App() {
   };
 
   const clickFunction = () => {
-    console.log(clickCounter);
     setClickCounter(clickCounter + 1);
     setAda(!ada);
-    setRandomNumber(Math.random() * 100);
+    setRandomNumber(Math.random() * 80);
   };
 
   return (
@@ -58,7 +57,7 @@ function App() {
     >
       <h1
         className={ada ? "random" : "none"}
-        style={{ marginLeft: randomNumber * 2, marginTop: randomNumber }}
+        style={{ top: `${randomNumber}%`, marginRight: randomNumber }}
       >
         Aww
       </h1>

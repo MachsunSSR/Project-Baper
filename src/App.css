@@ -5,6 +5,7 @@
 }
 
 .App {
+  user-select: none;
   height: 100vh;
   min-width: 100%;
   text-align: center;
@@ -42,9 +43,8 @@ h3 {
   position: absolute;
   opacity: 0;
   z-index: 3;
-  top: 50%;
   left: 50%;
-  color: #ffffff8a;
+  color: #c43470;
   animation: fadeout 1s;
 }
 
