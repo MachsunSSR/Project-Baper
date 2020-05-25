@@ -5,7 +5,8 @@ import Jam from "./Jam";
 
 function App() {
   const [clickCounter, setClickCounter] = useState(0);
-
+  const [ada, setAda] = useState(false);
+  const [randomNumber, setRandomNumber] = useState(0);
   let greet = "";
   const name = "Nadine";
   let isDay = true;
@@ -31,7 +32,7 @@ function App() {
   const ReactTypingEffectDemo = () => {
     return (
       <ReactTypingEffect
-        eraseDelay={10000}
+        eraseDelay={100000}
         text={greet}
         speed={100}
         typingDelay={1500}
@@ -42,6 +43,8 @@ function App() {
   const clickFunction = () => {
     console.log(clickCounter);
     setClickCounter(clickCounter + 1);
+    setAda(!ada);
+    setRandomNumber(Math.random() * 100);
   };
 
   return (
@@ -53,6 +56,12 @@ function App() {
       }}
       onClick={clickFunction}
     >
+      <h1
+        className={ada ? "random" : "none"}
+        style={{ marginLeft: randomNumber * 2, marginTop: randomNumber }}
+      >
+        Aww
+      </h1>
       <div className="content">
         <Jam />
         <h1>{ReactTypingEffectDemo()}</h1>

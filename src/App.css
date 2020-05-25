@@ -20,7 +20,7 @@
 }
 
 .nope {
-  transition: 500ms ease-in-out;
+  position: absolute;
   opacity: 0;
 }
 
@@ -35,4 +35,33 @@ h1,
 h2,
 h3 {
   pointer-events: none;
+}
+
+.random {
+  font-size: 18px;
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  color: #ffffff8a;
+  animation: fadeout 1s;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.none {
+  position: absolute;
+  opacity: 0;
+  font-size: 18px;
 }
