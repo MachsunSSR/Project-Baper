@@ -2,13 +2,28 @@
   height: 100vh;
   min-width: 100%;
   text-align: center;
+  font-size: 24px;
 }
 
 .content {
-  font-size: 24px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  pointer-events: none;
+}
+
+.nope {
+  transition: 500ms ease-in-out;
+  opacity: 0;
+}
+
+.thanks {
+  color: #9c266b;
+  opacity: 1;
+  transition: 2000ms ease-in-out;
 }
