@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   height: 100vh;
   min-width: 100%;
@@ -13,17 +19,20 @@
   justify-content: center;
 }
 
-h1 {
-  pointer-events: none;
-}
-
 .nope {
   transition: 500ms ease-in-out;
   opacity: 0;
 }
 
 .thanks {
-  color: #9c266b;
+  color: #92174a;
   opacity: 1;
-  transition: 2000ms ease-in-out;
+  transition: 1500ms ease-in-out;
+  margin-top: 50px;
+}
+
+h1,
+h2,
+h3 {
+  pointer-events: none;
 }
