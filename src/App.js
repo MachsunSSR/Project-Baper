@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import ReactTypingEffect from "react-typing-effect";
 import Jam from "./Jam";
+import Kotak from "./Kotak";
 
 function App() {
   const [clickCounter, setClickCounter] = useState(0);
@@ -29,6 +30,12 @@ function App() {
     greet = `Good Night, ${name}.`;
   }
 
+  const clickFunction = () => {
+    setClickCounter(clickCounter + 1);
+    setAda(!ada);
+    setRandomNumber(Math.random() * 80);
+  };
+
   const ReactTypingEffectDemo = () => {
     return (
       <ReactTypingEffect
@@ -38,12 +45,6 @@ function App() {
         typingDelay={1500}
       />
     );
-  };
-
-  const clickFunction = () => {
-    setClickCounter(clickCounter + 1);
-    setAda(!ada);
-    setRandomNumber(Math.random() * 80);
   };
 
   return (
@@ -75,6 +76,7 @@ function App() {
           </h2>
         </div>
       </div>
+      <Kotak />
     </div>
   );
 }
