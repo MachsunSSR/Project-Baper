@@ -3,6 +3,7 @@ import "./App.css";
 import ReactTypingEffect from "react-typing-effect";
 import Jam from "./Jam";
 import Kotak from "./Kotak";
+import music from "./music.mp3";
 
 function App() {
   const [clickCounter, setClickCounter] = useState(0);
@@ -11,12 +12,19 @@ function App() {
   let greet = "";
   const name = "Nadine";
   let isDay = true;
-
   const date = new Date();
   let hour = date.getHours();
+  const audio = new Audio(music);
+
+  const start = () => {
+    audio.play();
+  };
 
   if (hour < 12 && hour > 3) {
     greet = `Good Morning, ${name}.`;
+    if (hour < 7) {
+      isDay = true;
+    }
   } else if (hour >= 12 && hour < 17) {
     isDay = true;
     greet = `Good Afternoon, ${name}.`;
@@ -34,6 +42,9 @@ function App() {
     setClickCounter(clickCounter + 1);
     setAda(!ada);
     setRandomNumber(Math.random() * 80);
+    if (clickCounter === 2) {
+      start();
+    }
   };
 
   const ReactTypingEffectDemo = () => {
@@ -63,7 +74,9 @@ function App() {
         Aww
       </h1>
       <div className="content">
-        <Jam />
+        <div className="jam">
+          <Jam />
+        </div>
         <h1>{ReactTypingEffectDemo()}</h1>
         <div
           className="addision"
